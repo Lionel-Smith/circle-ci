@@ -4,7 +4,7 @@ from werkzeug.exceptions import BadRequest
 from src.stef_project.DTO.car_DTO import carDTO
 from src.stef_project.enums.exceptionMessages import UserExceptions
 from src.stef_project.car_repo import CarRepo
-
+ 
 
 class CarService():
     def __init__(self) :
@@ -15,7 +15,7 @@ class CarService():
         rate =7
         price = hours_parked*rate 
         if car_color in self.colors:
-            price= 0.14
+            price= 0.0
             if is_dirty == True:
                 price = (rate*hours_parked)/2
         else :
