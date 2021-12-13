@@ -1,12 +1,10 @@
-import tests_function
 from src import app
 from flask import request, jsonify, request
 from werkzeug.exceptions import BadRequest
 from src.stef_project.DTO.car_DTO import carDTO
 from src.stef_project.enums.exceptionMessages import UserExceptions
 from src.stef_project.car_repo import CarRepo
-from tests_function import example_test
-from  NIB_utils import NIB_utils 
+ 
 
 class CarService():
     def __init__(self) :
@@ -24,8 +22,7 @@ class CarService():
             price= hours_parked*rate
             if is_dirty == True:
                 price = (rate*hours_parked)*2
-        new_price= example_test.plus_6(price)
-        return new_price
+        return price
 
     def add_car(self, license_plate: str, car_color: str, is_dirty: bool, hours_parked: int):
         price= self.get_price(hours_parked, car_color, is_dirty)
