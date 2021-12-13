@@ -4,12 +4,7 @@ from werkzeug.exceptions import BadRequest
 from src.stef_project.DTO.car_DTO import carDTO
 from src.stef_project.enums.exceptionMessages import UserExceptions
 from src.stef_project.car_repo import CarRepo
-<<<<<<< HEAD
-
-=======
  
->>>>>>> 9ab46e11b9f0203231fd15ec9a17ff5c9c8fed5b
-
 class CarService():
     def __init__(self) :
         self.repo = CarRepo()
